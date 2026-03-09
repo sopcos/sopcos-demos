@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "author": "did:sop:admin:0x8829102",
+    "version": "2.0",
+    "created_at": "2026-02-04T12:00:00Z"
+  },
+  "target_profile": "boiler_master_unit",
+  "rules": [
+    {
+      "id": "EXPLOSION-RISK-CORRELATED",
+      "condition": "pressure > 100.0 AND vibration > 0.08",
+      "action": "HALT",
+      "reason": "CRITICAL_PRESSURE_AND_VIBRATION_MATCH_EXPLOSION_PATTERN",
+      "priority": 100
+    },
+    {
+      "id": "PRESSURE-ABSOLUTE-LIMIT",
+      "condition": "pressure > 120.0",
+      "action": "HALT",
+      "reason": "ABSOLUTE_PRESSURE_LIMIT_EXCEEDED",
+      "priority": 90
+    },
+    {
+      "id": "VIBRATION-WARNING",
+      "condition": "vibration > 0.05",
+      "action": "WARN",
+      "reason": "UNUSUAL_BEARING_WEAR_DETECTED",
+      "priority": 50
+    },
+    {
+      "id": "THERMAL-SURGE",
+      "condition": "temperature > 220.0",
+      "action": "WARN",
+      "reason": "BOILER_TEMPERATURE_EXCEEDS_NORMAL_ENVELOPE",
+      "priority": 40
+    },
+    {
+      "id": "SYSTEM-NORMAL",
+      "condition": "pressure <= 100.0 AND vibration <= 0.05",
+      "action": "ALLOW",
+      "reason": "ALL_SYSTEMS_NOMINAL",
+      "priority": 1
+    }
+  ]
+}

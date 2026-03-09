@@ -1,0 +1,99 @@
+🦅 --- SOPCOS CORE LEDGER: MULTI-NODE GENESIS ---
+
+[1/5] Purging existing databases...
+  - Cleaning: badger_3000
+  - Cleaning: badger_3001
+[2/5] Deleting legacy wallets.dat...
+
+[3/5] Building core-ledger binary...
+✅ Binary compiled successfully.
+
+[4/5] Creating Ledger Identities...
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: admin
+Private Key (Hex): 87bba3d45727793bdaac5ab45e4ab077bc4b055bb65a978ccd28736e6f8b2aca
+Public Key: SOPC_0499d6e7f4a5c79f599156eb5f0375bd1fce1fc2c2e888c72c63d99828abff5865ae502f4759895f61e9c6a91c393acac3a21c0ab3b369dcddbf35c292c3a4889e
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'admin' created successfully.
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: validator-A
+Private Key (Hex): 3994f33b7176297bdda19b68945671c0b3e2e10ab73066fa793f421a1226b2cf
+Public Key: SOPC_04337b7ac578d7f5d61adaa32b02ec043e772dd8deebbc0aaa80cdea9d5fe179a1d7ac7da7b12bf0d54b8ceec58902986ead13915a4b8adfcd04f3e14026260ca0
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'validator-A' created successfully.
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: acorp
+Private Key (Hex): 6b122ee989e6f62281540c5ef4d48e023a32bcccc46ee716a4c07a6a8ac6d38a
+Public Key: SOPC_0435d75606ec81c461905a86072e36ff5fa447b6c7c3726e40dda4457bcaf7a201ea9685aad3add75395fe8d6c851e036642b2d7262316e9096f8150df5090c97b
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'acorp' created successfully.
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: acorp-synapse-edge-01
+Private Key (Hex): b691773463a178776788f474b3e73cc034dca0bbf2229b54584149c096636a9a
+Public Key: SOPC_0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'acorp-synapse-edge-01' created successfully.
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: acorp-operator-01
+Private Key (Hex): b0baad96af7275320a3481409170aead879ccfe008397e2edcf115ec7983f974
+Public Key: SOPC_045401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'acorp-operator-01' created successfully.
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: acorp-auditor-01
+Private Key (Hex): 943305fffe31aad2ef6a5d9e9b72bb7f9635e87e77ba2a28118f118002c5d94c
+Public Key: SOPC_04d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb6
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'acorp-auditor-01' created successfully.
+
+🛑 ACTION REQUIRED: Identity rotation detected.
+1. Update 'config.yaml' with the new Public Keys.
+2. CRITICAL: Save the Public/Private Keys of the following users for ENV / Vinci integration:
+   - acorp-synapse-edge-01
+   - acorp-operator-01
+   - acorp-auditor-01
+Press any key AFTER configuration is updated to ignite nodes…
+
+
+[5/5] Launching Ledger Network...
+Stabilizing Genesis Node (3s)...
+
+--- MULTI-NODE STARTUP COMPLETE ---
+Status: Awaiting next sequence (02_Account_and_Finance_Setup.ps1)
+

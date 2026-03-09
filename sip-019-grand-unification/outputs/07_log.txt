@@ -1,0 +1,64 @@
+🛡️  --- AUDITOR: SYSTEM STATE RESET (CLEAN SLATE) ---
+---------------------------------------------------
+
+🛑 ACTION REQUIRED: Auditor Credentials
+Enter Auditor Public Key (Hex): 04d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb6
+Enter Auditor Private Key (Hex): 943305fffe31aad2ef6a5d9e9b72bb7f9635e87e77ba2a28118f118002c5d94c
+Enter Auditor Account ID (e.g., 6): 6
+✅ Auditor Identity Loaded. Target: did:sop:boiler-01
+
+[STEP 1] PREPARE: Requesting Reset Template (Type 18)...
+✅ PREPARE SUCCESS
+   📝 Unsigned Tx: ff8bff930301010b5472616e73616374696f6e01ff9400010a01024944010a0001045479706501040001074f70436f756e74010600010446726f6d010600010346656501040001084761734c696d69740106000108476173507269636501060001094f7065726174696f6e01ff960001095075626c69634b6579010a0001095369676e6174757265010a0000002cff95030101094f7065726174696f6e01ff9600010201045479706501060001075061796c6f6164010a000000fe0148ff940120d8717454875297ff8a6849ac54431b6e0070151de0c9b5c9bdd8dd47763ec99f030601fe07d003011201ffd37b227461726765745f646964223a226469643a736f703a626f696c65722d3031222c226f766572726964655f7265666572656e6365223a227368613235363a6d6f636b2d6f766572726964652d726566222c2261756469746f725f76657264696374223a224a5553544946494544222c22726561736f6e223a22436f6d706c69616e6365204175646974202339393231205061737365642e2053797374656d20726573746f7265642e222c2261756469745f726566223a2275726e3a736f70636f733a61756469743a323032352d303031227d00014104d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb600
+   🔐 Hash To Sign: d8717454875297ff8a6849ac54431b6e0070151de0c9b5c9bdd8dd47763ec99f
+
+[STEP 2] SIGN: Generating real cryptographic signature locally...
+✅ SIGN SUCCESS
+   🖋️  Signature: 3c3364170fc17b3e2fd8f1c7cdff68e0258197d0bb93c2138744159a509fb285db68a57d42f4678f560218f603b2c4a32bbcf5d67682a9ca71b42e1b8964cb87
+
+[STEP 3] BROADCAST: Sending Signed Reset to Ledger...
+✅ RESET SUCCESS
+   🚀 Transaction ID: d8717454875297ff8a6849ac54431b6e0070151de0c9b5c9bdd8dd47763ec99f
+   ✨ Local State for did:sop:boiler-01 should now be CLEAN.
+---------------------------------------------------
+GET http://localhost:8080/tx/d8717454875297ff8a6849ac54431b6e0070151de0c9b5c9bdd8dd47763ec99f
+{
+    "success": true,
+    "data": {
+        "block_hash": "318b21f9d8ad8d0e0d2bba3527594b7e56d20063e21951d6c5d93e672a2c677c",
+        "block_height": 162,
+        "fee": 1000,
+        "from": 6,
+        "gas_limit": 0,
+        "gas_price": 0,
+        "op_count": 0,
+        "public_key": "04d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb6",
+        "receipt": {
+            "error": "",
+            "gas_used": 0,
+            "status": true
+        },
+        "signature": "3c3364170fc17b3e2fd8f1c7cdff68e0258197d0bb93c2138744159a509fb285db68a57d42f4678f560218f603b2c4a32bbcf5d67682a9ca71b42e1b8964cb87",
+        "status": "Confirmed",
+        "timestamp": 1772659988,
+        "tx_id": "d8717454875297ff8a6849ac54431b6e0070151de0c9b5c9bdd8dd47763ec99f",
+        "type": "StateReset"
+    }
+}
+
+
+GET http://localhost:8080/policy/did:sop:boiler-01
+ {
+    "success": true,
+    "data": {
+        "authority_level": 0,
+        "binding_provenance": null,
+        "gateway_signature": "",
+        "input_hash": "c2hhMjU2OmR1bW15X2lucHV0X2hhc2hfZm9yX3Rlc3Q=",
+        "policy_hash": "c2hhMjU2OmR1bW15X3BvbGljeV9oYXNoX2Zvcl90ZXN0",
+        "reason": "Compliance Audit #9921 Passed. System restored.",
+        "system_state": "CLEAN",
+        "target_did": "did:sop:boiler-01",
+        "verdict": 1
+    }
+} 

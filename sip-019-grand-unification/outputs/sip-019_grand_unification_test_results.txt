@@ -1,0 +1,669 @@
+🦅 --- SOPCOS CORE LEDGER: MULTI-NODE GENESIS ---
+
+[1/5] Purging existing databases...
+  - Cleaning: badger_3000
+  - Cleaning: badger_3001
+[2/5] Deleting legacy wallets.dat...
+
+[3/5] Building core-ledger binary...
+✅ Binary compiled successfully.
+
+[4/5] Creating Ledger Identities...
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: admin
+Private Key (Hex): 87bba3d45727793bdaac5ab45e4ab077bc4b055bb65a978ccd28736e6f8b2aca
+Public Key: SOPC_0499d6e7f4a5c79f599156eb5f0375bd1fce1fc2c2e888c72c63d99828abff5865ae502f4759895f61e9c6a91c393acac3a21c0ab3b369dcddbf35c292c3a4889e
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'admin' created successfully.
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: validator-A
+Private Key (Hex): 3994f33b7176297bdda19b68945671c0b3e2e10ab73066fa793f421a1226b2cf
+Public Key: SOPC_04337b7ac578d7f5d61adaa32b02ec043e772dd8deebbc0aaa80cdea9d5fe179a1d7ac7da7b12bf0d54b8ceec58902986ead13915a4b8adfcd04f3e14026260ca0
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'validator-A' created successfully.
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: acorp
+Private Key (Hex): 6b122ee989e6f62281540c5ef4d48e023a32bcccc46ee716a4c07a6a8ac6d38a
+Public Key: SOPC_0435d75606ec81c461905a86072e36ff5fa447b6c7c3726e40dda4457bcaf7a201ea9685aad3add75395fe8d6c851e036642b2d7262316e9096f8150df5090c97b
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'acorp' created successfully.
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: acorp-synapse-edge-01
+Private Key (Hex): b691773463a178776788f474b3e73cc034dca0bbf2229b54584149c096636a9a
+Public Key: SOPC_0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'acorp-synapse-edge-01' created successfully.
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: acorp-operator-01
+Private Key (Hex): b0baad96af7275320a3481409170aead879ccfe008397e2edcf115ec7983f974
+Public Key: SOPC_045401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'acorp-operator-01' created successfully.
+Using config file: C:\sopcos\core-ledger\config.toml
+
+!!! --- IMPORTANT: PRIVATE KEY --- !!!
+This is your wallet's private key. Write it down and keep it SAFE.
+DO NOT share it with anyone. Losing it means losing access to your funds.
+-----------------------------------------------------------------
+Wallet: acorp-auditor-01
+Private Key (Hex): 943305fffe31aad2ef6a5d9e9b72bb7f9635e87e77ba2a28118f118002c5d94c
+Public Key: SOPC_04d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb6
+-----------------------------------------------------------------
+For security, the wallet will now be re-locked and saved encrypted.
+Wallet 'acorp-auditor-01' created successfully.
+
+🛑 ACTION REQUIRED: Identity rotation detected.
+1. Update 'config.yaml' with the new Public Keys.
+2. CRITICAL: Save the Public/Private Keys of the following users for ENV / Vinci integration:
+   - acorp-synapse-edge-01
+   - acorp-operator-01
+   - acorp-auditor-01
+Press any key AFTER configuration is updated to ignite nodes…
+
+
+[5/5] Launching Ledger Network...
+Stabilizing Genesis Node (3s)...
+
+--- MULTI-NODE STARTUP COMPLETE ---
+Status: Awaiting next sequence (02_Account_and_Finance_Setup.ps1)
+
+🦅 --- SOPCOS CORE LEDGER: FINANCIAL INITIALIZATION ---
+
+[1/4] Provisioning Accounts...
+  - Creating account for 'acorp' (Expected Index: 3)...
+Using config file: C:\sopcos\core-ledger\config.toml
+time=2026-03-05T00:09:58.784+03:00 level=INFO msg="Solving Proof-of-Work puzzle to create account... (this may take a few seconds)"
+time=2026-03-05T00:09:58.789+03:00 level=INFO msg="Proof-of-Work puzzle solved!" tx_id=0000c65f8cea57193626732366c6c099c2aed3a5d300feb0eafc7629e5770bb0
+Account creation transaction sent successfully. ID: 0000c65f8cea57193626732366c6c099c2aed3a5d300feb0eafc7629e5770bb0
+Use 'gettxstatus' to check for confirmation. It may take a few blocks for the account to appear.
+  - Creating account for 'acorp-synapse-edge-01' (Expected Index: 4)...
+Using config file: C:\sopcos\core-ledger\config.toml
+time=2026-03-05T00:10:03.840+03:00 level=INFO msg="Solving Proof-of-Work puzzle to create account... (this may take a few seconds)"
+time=2026-03-05T00:10:03.864+03:00 level=INFO msg="Proof-of-Work puzzle solved!" tx_id=00007eab71a5b98d1bc138d3432ac964611f6f420e8998834754e045e15aced3
+Account creation transaction sent successfully. ID: 00007eab71a5b98d1bc138d3432ac964611f6f420e8998834754e045e15aced3
+Use 'gettxstatus' to check for confirmation. It may take a few blocks for the account to appear.
+  - Creating account for 'acorp-operator-01' (Expected Index: 5)...
+Using config file: C:\sopcos\core-ledger\config.toml
+time=2026-03-05T00:10:08.917+03:00 level=INFO msg="Solving Proof-of-Work puzzle to create account... (this may take a few seconds)"
+time=2026-03-05T00:10:08.960+03:00 level=INFO msg="Proof-of-Work puzzle solved!" tx_id=0000ad24723346bda680a00af5af97c8eee4a130ab9f9001415624331cbb2b88
+Account creation transaction sent successfully. ID: 0000ad24723346bda680a00af5af97c8eee4a130ab9f9001415624331cbb2b88
+Use 'gettxstatus' to check for confirmation. It may take a few blocks for the account to appear.
+  - Creating account for 'acorp-auditor-01' (Expected Index: 6)...
+Using config file: C:\sopcos\core-ledger\config.toml
+time=2026-03-05T00:10:13.835+03:00 level=INFO msg="Solving Proof-of-Work puzzle to create account... (this may take a few seconds)"
+time=2026-03-05T00:10:13.839+03:00 level=INFO msg="Proof-of-Work puzzle solved!" tx_id=0000621cdf1221cffa2b37ec53043d5c831c66dd108aee1ce425b73f1b60326f
+Account creation transaction sent successfully. ID: 0000621cdf1221cffa2b37ec53043d5c831c66dd108aee1ce425b73f1b60326f
+Use 'gettxstatus' to check for confirmation. It may take a few blocks for the account to appear.
+✅ Accounts created successfully.
+
+[2/4] Verifying account list...
+
+--- ACCOUNT INDICES TELESCOPE ---
+Using config file: C:\sopcos\core-ledger\config.toml
+--- Accounts Owned by Wallet 'acorp' ---
+ACCOUNT #       NAME    BALANCE (SOPC)  DATA    PUBLIC KEY
+---------       ----    --------------  ----    ----------
+3                       0.002 SOPC              SOPC_35d75606ec81c461905a86072e36ff5fa447b6c7c3726e40dda4457bcaf7a201ea9685aad3add75395fe8d6c851e036642b2d7262316e9096f8150df5090c97b
+---------       ----    --------------  ----    ----------
+TOTAL           0.002 SOPC
+Using config file: C:\sopcos\core-ledger\config.toml
+--- Accounts Owned by Wallet 'acorp-synapse-edge-01' ---
+ACCOUNT #       NAME    BALANCE (SOPC)  DATA    PUBLIC KEY
+---------       ----    --------------  ----    ----------
+4                       0.002 SOPC              SOPC_21d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+---------       ----    --------------  ----    ----------
+TOTAL           0.002 SOPC
+Using config file: C:\sopcos\core-ledger\config.toml
+--- Accounts Owned by Wallet 'acorp-operator-01' ---
+ACCOUNT #       NAME    BALANCE (SOPC)  DATA    PUBLIC KEY
+---------       ----    --------------  ----    ----------
+5                       0.002 SOPC              SOPC_5401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a
+---------       ----    --------------  ----    ----------
+TOTAL           0.002 SOPC
+Using config file: C:\sopcos\core-ledger\config.toml
+No accounts on the blockchain found for wallet 'acorp-auditor-01'.
+
+Please verify indices: Acorp(3), Synapse(4), Operator(5), Auditor(6).
+Press any key to proceed with the Funding Transfers...
+
+[3/4] Executing Genesis Transfer (Admin #1 -> ACorp #3)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent successfully. ID: 2ae04f6751ef449494e60bf4acc33d6f3f1225071cc8d41834738cc18c999092
+✅ Success! 1000 SOPC transferred to ACorp.
+
+[4/4] Executing Operational Funding (100 SOPC each)...
+  -> Funding Synapse Edge (#4)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent successfully. ID: 52f70d283ef5960411d74c238d06e05594ec00582a2738bf9ea5158cf354d21a
+  -> Funding Operator (#5)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent successfully. ID: debc9c3bf9ac86e68074e20fd2b4f3738757243afa7b657afb7ddef7f23e4e66
+  -> Funding Auditor (#6)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent successfully. ID: b769294d97a79eaed0730dbb4c4372b495e52ff18d5dda9e3ac760689d77b685
+
+--- FINANCIAL SETUP COMPLETE ---
+ACorp (700 SOPC), Synapse (100 SOPC), Operator (100 SOPC), Auditor (100 SOPC) are funded.
+Next Step: 03_Deploy_Smart_Unit.ps1
+
+🦅 --- SOPCOS NEXUS: FULL DEPLOYMENT SEQUENCE ---
+
+[1/6] Compiling Smart Unit WASM (TinyGo)...
+✅ registry.wasm compiled successfully.
+
+[2/6] Deploying WASM Policy via ACorp...
+Using config file: C:\sopcos\core-ledger\config.toml
+Deploy transaction sent. ID: c439ab7b2bcfab19b1855320e2b81b32f998eca5f0b17161c9cea9accb2b0603
+
+✅ Deployment transaction submitted.
+ACTION REQUIRED: Locate the 'Contract ID' in the Ledger logs.
+Enter the DEPLOYED CONTRACT ID (Registry ID): 8
+
+[3/6] Registering Organization & Edge Identities...
+  -> Registering Root Organization: did:sop:acorp
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent! ID: e753a940d9d32f2b6953d94b5908dd937bedddc545ee383a0da5b9359e60778c
+Waiting for block confirmation...
+✅ Transaction Confirmed in Block #43
+✅ Contract Execution Successful.
+
+🛑 ACTION REQUIRED: Identity Public Keys
+Please enter the Public Keys noted from Script 01.
+Enter 'acorp-synapse-edge-01' Public Key (Hex): 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+  -> Registering Edge Gateway (did:sop:acorp-synapse-edge-01:0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent! ID: 34b814b61251a80a9e988e23d11e14332b58e7f2f97a472d5663b1471a68ea08
+Waiting for block confirmation...
+.✅ Transaction Confirmed in Block #45
+✅ Contract Execution Successful.
+Enter 'acorp-operator-01' Public Key (Hex): 045401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a
+  -> Registering Operator (did:sop:acorp-operator-01:045401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent! ID: a16d102b63edd159e348eb1bcf6319c33b1ff77c83dba96afa7d06b631ea73c3
+Waiting for block confirmation...
+..✅ Transaction Confirmed in Block #46
+✅ Contract Execution Successful.
+Enter 'acorp-auditor-01' Public Key (Hex): 04d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb6
+  -> Registering Auditor (did:sop:acorp-auditor-01:04d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb6)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent! ID: 9d107207f27655dc7bcd80598e0c6d817fc81a02b00e0afeea8b23774ecddfb0
+Waiting for block confirmation...
+..✅ Transaction Confirmed in Block #47
+✅ Contract Execution Successful.
+
+✅ All identities registered successfully with SIP-018 Authority Levels.
+
+[4/6] Launching Core Ledger API...
+✅ API Gateway started in a new window.
+
+[5/6] Creating IDAS Asset Class (Industrial Boilers)...
+Using config file: C:\sopcos\core-ledger\config.toml
+✅ Asset Class creation transaction sent.
+Transaction ID: 9ae449f03c574a1cc5f010761390a0e5de9fa47ff50c519952f9de63cd03cd7b
+Calculated ClassID: 16372392958147715323
+Note: Please wait for the transaction to be confirmed.
+
+✅ Class creation request sent.
+ACTION REQUIRED: Locate the 'Calculated ClassID' in the logs.
+Enter the Calculated CLASS ID: 16372392958147715323
+
+[6/6] Minting IDAS Asset (Digital Twin)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Mint IDAS transaction sent successfully. TX ID: adba65401a4e6d574a1a8d18aee68769b2600cdd9281f902646f03dd49c75cba
+
+✅ IDAS Minting Successful!
+Please take note of the generated ASSET ID for your records.
+
+--- FULL NEXUS DEPLOYMENT COMPLETE ---
+WASM Policy: Active (Registry ID: 8)
+Organization: did:sop:acorp (Registered)
+Edge Gateway: did:sop:acorp-synapse-edge-01:0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80 (Registered)
+Asset: Boiler SN-2026-SIP21 (Minted)
+API: Listening...
+Next Step: Configure Synapse with its Keystore and start sending signed Verdicts!
+
+🦅 --- SOPCOS AXON: POLICY ORCHESTRATION & ENFORCEMENT ---
+
+[0/6] Purging old Axon local database...
+  - No existing data folder found. Proceeding cleanly.
+
+[1/6] Building Axon binary and WASM policy...
+🦅 Sopcos Policy Transpiler v2.0 (Smart Unit Support)
+📝 Loaded Policy: boiler_master_unit (v2.0)
+✨ TinyGo detected! Using Extended ABI (Shared Memory).
+⚙️  Generated Source: generated_policy.go
+🔨 Compiling to WASM: artifacts\policy.wasm...
+✅ Build Success! Production-ready WASM created.
+🔑 WASM Hash: 278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+✅ Binary and WASM policy built successfully.
+
+[2/6] Configuring Cloud Environment...
+Enter AWS_ACCESS_KEY_ID: AKIAZOD2IUNTPDQ7F665
+Enter AWS_SECRET_ACCESS_KEY: ****************************************
+Enter AWS_REGION: eu-north-1
+
+[3/6] Publishing WASM to Cloud Vault (S3)...
+🦅 Sopcos Artifact Publisher (SIP-019)
+📂 Reading Artifact: artifacts\policy.wasm
+🧬 Artifact DNA: 278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+☁️  Initializing S3 Upload to [eu-north-1] sopcos-vault...
+✅ Upload Success! URI: s3://sopcos-vault/policies/v1/278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d.wasm
+
+📋 Ledger Transaction Payload (Ready for CLI):
+---------------------------------------------------
+{
+  "op_code": "0x50",
+  "urn": "urn:sopcos:policy:278a9ac890b498c5",
+  "content_hash": "278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d",
+  "type": "policy",
+  "author_did": "did:sop:boiler-01",
+  "storage_uri": "s3://sopcos-vault/policies/v1/278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d.wasm",
+  "policy_type": "unit_master",
+  "scope": [
+    "pressure",
+    "vibration",
+    "temperature",
+    "rpm"
+  ],
+  "algorithm": "sha256",
+  "timestamp": 1772659093
+}
+---------------------------------------------------
+🔍 Smart Unit Scope: [pressure vibration temperature rpm]
+
+✅ Cloud upload complete.
+ACTION REQUIRED: Copy the publisher output to '.\artifacts\payload.json' and save.
+Press Enter AFTER saving artifacts/payload.json (Also please don't forget to update acorp private key to config.yaml):
+
+
+[4/6] Submitting transaction to Core Ledger...
+🚀 Sopcos Transaction Submitter
+📦 Loaded Payload for DID: did:sop:boiler-01
+📡 Sending Prepare Request...
+📝 Hash to Sign: 42d78503ba1a4575b0917a5ea04b25caa62b04da5443b90cffab89b334e198b6
+🚀 Broadcasting Transaction...
+✅ Transaction Success!
+🔗 TX Hash: 
+✅ Policy anchored to Ledger successfully.
+
+[5/6] Verifying Deployment via API Gateway...
+✅ Verification Success: Policy found on Ledger!
+URN: urn:sopcos:policy:278a9ac890b498c5
+
+[6/6] Running Enforcer (Policy Truth Verification)...
+Enter the WASM S3 URI: s3://sopcos-vault/policies/v1/278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d.wasm
+Enter the WASM Hash: 278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+Testing policy with Telemetry: Pressure=97, Vibration=0.026, Temp=250
+🛡️  Sopcos Policy Enforcer (Synapse Node)
+📡 Connecting to Vault: [eu-north-1] sopcos-vault
+⬇️  Downloading Artifact: policies/v1/278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d.wasm
+🧬 Integrity Check:
+   Expected:   278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+   Calculated: 278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+✅ Integrity Verified. Artifact is trusted.
+🚀 Initializing Wazero Sandbox (WASI)...
+⚡ Injecting Telemetry (Shared Memory): {"device_id":"enforcer-test-device","timestamp":1772659147,"readings":{"pressure":97,"temperature":250,"vibration":0.026}}
+
+⚖️  FINAL VERDICT:
+---------------------------------------------------
+{
+  "verdict": "WARN",
+  "reason": "BOILER_TEMPERATURE_EXCEEDS_NORMAL_ENVELOPE",
+  "input_hash": "574cb8368286bb58658f3000dae6b0ebffc69863d8451dcaf669a833c7753488",
+  "gateway_signature": "sig_mock_enforcer_tool",
+  "policy_hash": "278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d",
+  "binding_provenance": {
+    "declaration_hash": "hash_mock_binding",
+    "sensor_timestamp": 1772659147
+  }
+}
+⏱️  Execution Time: 0s
+---------------------------------------------------
+
+✅ Enforcer Confirmed: WASM logic is operational.
+
+--- AXON DEPLOYMENT & ENFORCEMENT COMPLETE ---
+Next Step: 05_Launch_Synapse_Runtime.ps1
+
+🦅 --- SOPCOS NEXUS: RUNTIME ACTIVATION ---
+
+[1/6] Launching Axon Gateway (Blind Relay Mode)...
+Waiting for Axon to initialize (3s)...
+
+[2/6] Building Synapse and purging local state...
+✅ Local data directory purged for a clean start.
+
+[3/6] Starting InfluxDB and Grafana Servers...
+✅ InfluxDB running (Minimized).
+✅ Grafana running (Minimized).
+Stabilizing metrics stack (5s)...
+
+🛑 ACTION REQUIRED: InfluxDB Token
+Enter InfluxDB Token for Telemetry Purge (or press Enter to skip): 1h18aqNS8Yjk_azBqBZ-cEKci9yzRxs0hM6tDIRp3n4gNI48sjW3f0S0RzHNpoIyT9S4iPvFPug5VINToL79zw==
+  -> Purging old telemetry from 'telemetry' bucket...
+✅ InfluxDB wiped clean.
+
+[4/6] Injecting Edge Credentials and Launching Synapse...
+
+🛑 ACTION REQUIRED: Synapse Cryptographic Keys
+Please enter the Public and Private keys generated for 'acorp-synapse-edge-01' (from Script 01).
+Enter Synapse Public Key (Hex): 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+Enter Synapse Private Key (Hex): b691773463a178776788f474b3e73cc034dca0bbf2229b54584149c096636a9a
+
+🔒 Cryptographic Identity loaded into memory.
+  -> Assigned DID: did:sop:acorp-synapse-edge-01:0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+
+Waiting for Synapse Edge Engine to bind (5s)...
+
+[5/6] Igniting Physical Twin (Telemetry Simulator)...
+Simulating Canonical Industrial Incident Scenario (ALLOW -> WARN -> HALT)
+🏭 SOPCOS Industrial Simulator (SIP-019)
+🎯 Target: http://127.0.0.1:8081/api/v1/telemetry
+🆔 Device: did:sop:boiler-01
+⏱️  Interval: 4s
+[🟢 NORMAL] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659386,"readings":{"motor_rpm":1503,"pressure":85.5467193281892,"temperature":188.64994386712314,"vibration":0.019166478248518293}} | Status: 200 OK
+[🟢 NORMAL] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659390,"readings":{"motor_rpm":1560,"pressure":91.35952586053055,"temperature":185.96927144788296,"vibration":0.02864878008729478}} | Status: 200 OK
+[🟢 NORMAL] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659394,"readings":{"motor_rpm":1507,"pressure":86.67640950043061,"temperature":196.7942485706568,"vibration":0.03590433410431837}} | Status: 200 OK
+[🟢 NORMAL] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659398,"readings":{"motor_rpm":1576,"pressure":88.23308066642869,"temperature":189.33584783382923,"vibration":0.016404549158468718}} | Status: 200 OK
+[🟡 WARNING (Vibration)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659402,"readings":{"motor_rpm":1503,"pressure":92.11254183090418,"temperature":198.38120651677755,"vibration":0.09673750645481008}} | Status: 200 OK
+[🟡 WARNING (Vibration)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659406,"readings":{"motor_rpm":1550,"pressure":94.80347790413654,"temperature":190.01629517599366,"vibration":0.07078399862884616}} | Status: 200 OK
+[🟡 WARNING (Vibration)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659410,"readings":{"motor_rpm":1554,"pressure":93.32506936547489,"temperature":198.9705547133956,"vibration":0.083296168049231}} | Status: 200 OK
+[🟡 WARNING (Vibration)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659414,"readings":{"motor_rpm":1578,"pressure":92.97400816969439,"temperature":190.52641628373416,"vibration":0.08759517419782611}} | Status: 200 OK
+[🟡 WARNING (Vibration)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659418,"readings":{"motor_rpm":1593,"pressure":94.84850972991919,"temperature":199.77780137793837,"vibration":0.06423138091395982}} | Status: 200 OK
+[🟡 WARNING (Thermal)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659422,"readings":{"motor_rpm":1504,"pressure":98.01687018309363,"temperature":225.64851740176343,"vibration":0.03282521725731076}} | Status: 200 OK
+[🟡 WARNING (Thermal)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659426,"readings":{"motor_rpm":1562,"pressure":96.72476093913038,"temperature":229.82788713967733,"vibration":0.03570668718121991}} | Status: 200 OK
+[🟡 WARNING (Thermal)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659430,"readings":{"motor_rpm":1551,"pressure":95.08077949098447,"temperature":231.34330219649186,"vibration":0.025555257372909854}} | Status: 200 OK
+[🟡 WARNING (Thermal)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659434,"readings":{"motor_rpm":1503,"pressure":97.72326788650155,"temperature":228.62072080920092,"vibration":0.0382572131074884}} | Status: 200 OK
+[🟡 WARNING (Thermal)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659438,"readings":{"motor_rpm":1500,"pressure":97.50569223570392,"temperature":235.78687854043423,"vibration":0.023670761417531713}} | Status: 200 OK
+[🔴 LOCKED (Correlated)] Generating Readings... 📡 Sent: {"device_id":"did:sop:boiler-01","timestamp":1772659442,"readings":{"motor_rpm":1527,"pressure":112.02935347571449,"temperature":205.86661280804935,"vibration":0.1320490757562263}} | Status: 200 OK
+🛑 System HALT state reached. Stopping simulator.
+
+[6/6] Independent Auditor Verification (L1 Ledger Truth)...
+
+--- FETCHING LATEST VERDICT ---
+💡 Detected nested 'synapse_db'. Switching database path to: C:\sopcos\sopcos-synapse\data\synapse_db
+🔒 Database is locked. Creating temporary snapshot...
+📋 Snapshot: Copied 5 files.
+🔍 Searching for verdicts for DID: did:sop:boiler-01
+📂 Database Path: C:\sopcos\sopcos-synapse\data\synapse_db
+-------------------------------------------------------------------------------------
+📊 DB Directory contains 6 files:
+   - 000001.vlog (2147483646 bytes)
+   - 00001.mem (134217728 bytes)
+   - DISCARD (1048576 bytes)
+   - KEYREGISTRY (28 bytes)
+   - LOCK (0 bytes)
+   - MANIFEST (16 bytes)
+-------------------------------------------------------------------------------------
+TIMESTAMP             VERDICT   INTEGRITY STATUS                                                     TELEMETRY SUMMARY
+2026-03-04 21:24:02   HALT      [LOCAL_ONLY]                                                         RAW:map[reason:CRITICAL_PRESSURE_AND_VIBRATION_MATCH_EXPLOSION_PATTERN rule_id:EXPLOSION-RISK-CORRELATED status:HALT], reason=CRITICAL_PRESSURE_AND_VIBRATION_MATCH_EXPLOSION_PATTERN, status=HALT, telemetry=map[motor_rpm:1527 pressure:112.02935347571449 temperature:205.86661280804935 vibration:0.1320490757562263], unit_verdict=2
+2026-03-04 21:23:42   WARN      🔗 0b92b2a0c94a0650090a1c458e7907115ff888e0d5d584322045ec962d76f5af   RAW:map[reason:BOILER_TEMPERATURE_EXCEEDS_NORMAL_ENVELOPE rule_id:THERMAL-SURGE status:WARN], unit_verdict=1, reason=BOILER_TEMPERATURE_EXCEEDS_NORMAL_ENVELOPE, status=WARN, telemetry=map[motor_rpm:1504 pressure:98.01687018309363 temperature:225.64851740176343 vibration:0.03282521725731076]
+2026-03-04 21:23:22   WARN      🔗 3bcc2ce58f50a4730058f74bb05f3272b6b680ec4933d2ecbbe850b6659a6541   RAW:map[reason:UNUSUAL_BEARING_WEAR_DETECTED rule_id:VIBRATION-WARNING status:WARN], reason=UNUSUAL_BEARING_WEAR_DETECTED, status=WARN, telemetry=map[motor_rpm:1503 pressure:92.11254183090418 temperature:198.38120651677755 vibration:0.09673750645481008], unit_verdict=1
+-------------------------------------------------------------------------------------
+🧹 Snapshot cleaned up.
+
+Stabilizing (3s)...
+
+--- FETCHING TELEMETRY ANCHOR ---
+💡 Detected nested 'synapse_db'. Switching database path to: C:\sopcos\sopcos-synapse\data\synapse_db
+⚓ Searching for ANCHORS for DID: did:sop:boiler-01
+📂 Database Path: C:\sopcos\sopcos-synapse\data\synapse_db
+----------------------------------------------------------------------------------------------------------------
+START TIME   END TIME   BATCH HASH   LEDGER TX
+----------------------------------------------------------------------------------------------------------------
+⚠️  No anchor records found.
+💡 HINT: Found 'verdict' keys. Metadata might use different casing (e.g. BatchHash vs batch_hash).
+
+--- NEXUS ECOSYSTEM IS LIVE & AUDIT COMPLETE ---
+1. Axon: Routing as Blind Relay
+2. Synapse: Processing & Signing Operations
+3. Influx/Grafana: Visualizing State
+4. L1 Ledger: Evidence Anchored
+
+Monitoring active at http://localhost:4000
+
+--- INJECTED ENVIRONMENT VARIABLES ---
+
+Name                    Value
+----                    -----
+SYNAPSE_DID             did:sop:acorp-synapse-edge-01:0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b...
+SYNAPSE_PRIVATE_KEY_HEX b691773463a178776788f474b3e73cc034dca0bbf2229b54584149c096636a9a
+SYNAPSE_USER_ID         4
+
+
+2026/03/05 00:22:57 🦡 Initializing BadgerDB at ./data/synapse_db...
+2026/03/05 00:22:57 🔗 Using AXON Chain at http://localhost:9000
+2026/03/05 00:22:57 🔐 Wallet Initialized: UserID=4 | PubKey (Hex)=0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+2026/03/05 00:22:57 🔐 Synapse Identity Loaded: did:sop:acorp-synapse-edge-01:0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80 (User ID: 4)
+2026/03/05 00:22:57 🧠 Synapse Policy Engine Initialized (Lazy Loading Enabled)
+2026/03/05 00:22:57 🔌 Connected to InfluxDB at http://localhost:8086 (Bucket: telemetry, Org: sopcos_org, Token: 1h18...zw==) [DEBUG: BLOCKING MODE]
+2026/03/05 00:22:57 📂 Loaded 0 policies into engine cache
+2026/03/05 00:22:57 🔌 Bridged to Sopcos Axon L2
+2026/03/05 00:22:57 ⚓ Anchorer Worker started (Interval: 10s)
+2026/03/05 00:22:57 🔌 [SYNAPSE] IDAS Gateway Open -> Proxying to Axon
+2026/03/05 00:22:57 🦅 Sopcos Synapse Gateway is running on :8081
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659386,"readings":{"motor_rpm":1503,"pressure":85.5467193281892,"temperature":188.64994386712314,"vibration":0.019166478248518293}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SYNAPSE] Resolving Policy via: http://localhost:9000/api/v1/device/policy?did=did:sop:boiler-01
+📦 [SYNAPSE] Verified Policy Hash: 278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: ALLOW | Rule: ALL_SYSTEMS_NOMINAL | ⏱️  1.3058449s
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659390,"readings":{"motor_rpm":1560,"pressure":91.35952586053055,"temperature":185.96927144788296,"vibration":0.02864878008729478}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: ALLOW | Rule: ALL_SYSTEMS_NOMINAL | ⏱️  221.2µs
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659394,"readings":{"motor_rpm":1507,"pressure":86.67640950043061,"temperature":196.7942485706568,"vibration":0.03590433410431837}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: ALLOW | Rule: ALL_SYSTEMS_NOMINAL | ⏱️  0s
+2026/03/05 00:23:17 ⚓ Submitting Anchor for User 4 with PubKey: 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659398,"readings":{"motor_rpm":1576,"pressure":88.23308066642869,"temperature":189.33584783382923,"vibration":0.016404549158468718}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: ALLOW | Rule: ALL_SYSTEMS_NOMINAL | ⏱️  0s
+2026/03/05 00:23:18 ❌ MQTT Connect Failed: network Error : dial tcp 54.36.178.49:1883: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659402,"readings":{"motor_rpm":1503,"pressure":92.11254183090418,"temperature":198.38120651677755,"vibration":0.09673750645481008}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: WARN | Rule: UNUSUAL_BEARING_WEAR_DETECTED | ⏱️  523.5µs
+📤 [REPORTING] Trigger: STATE_TRANSITION | Device: did:sop:boiler-01 | Verdict: WARN
+2026/03/05 00:23:22 ⚖️ Sending Verdict for User 4 with PubKey: 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+2026/03/05 00:23:22 ✅ Anchor sent to Axon! [Count: 3] [BatchHash: 006cd3907de01ef475f5103b06b6473ef0896a061dc3d52609d5eb33aaee53d2] [TxHash: afd509c226fdf7e8f4e99de5870c3944cc114c3c8d9039cb007561086c8e1042]
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659406,"readings":{"motor_rpm":1550,"pressure":94.80347790413654,"temperature":190.01629517599366,"vibration":0.07078399862884616}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: WARN | Rule: UNUSUAL_BEARING_WEAR_DETECTED | ⏱️  515.4µs
+🔗 [LEDGER] Verdict Anchored | Tx: 3bcc2ce58f50a4730058f74bb05f3272b6b680ec4933d2ecbbe850b6659a6541 | Device: did:sop:boiler-01
+2026/03/05 00:23:27 ⚓ Submitting Anchor for User 4 with PubKey: 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659410,"readings":{"motor_rpm":1554,"pressure":93.32506936547489,"temperature":198.9705547133956,"vibration":0.083296168049231}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: WARN | Rule: UNUSUAL_BEARING_WEAR_DETECTED | ⏱️  504.4µs
+2026/03/05 00:23:32 ✅ Anchor sent to Axon! [Count: 3] [BatchHash: e90967cf67830a602127a4a61389384a8410560e6b490ecde0d7516a2efef260] [TxHash: b28c617fd7b1f5f4cfec2fc384689529fdf8bab59fb6b03b9522d3dbc4c2572b]
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659414,"readings":{"motor_rpm":1578,"pressure":92.97400816969439,"temperature":190.52641628373416,"vibration":0.08759517419782611}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: WARN | Rule: UNUSUAL_BEARING_WEAR_DETECTED | ⏱️  580.8µs
+2026/03/05 00:23:37 ⚓ Submitting Anchor for User 4 with PubKey: 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659418,"readings":{"motor_rpm":1593,"pressure":94.84850972991919,"temperature":199.77780137793837,"vibration":0.06423138091395982}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: WARN | Rule: UNUSUAL_BEARING_WEAR_DETECTED | ⏱️  567.8µs
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659422,"readings":{"motor_rpm":1504,"pressure":98.01687018309363,"temperature":225.64851740176343,"vibration":0.03282521725731076}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: WARN | Rule: BOILER_TEMPERATURE_EXCEEDS_NORMAL_ENVELOPE | ⏱️  0s
+📤 [REPORTING] Trigger: STATE_TRANSITION | Device: did:sop:boiler-01 | Verdict: WARN
+2026/03/05 00:23:42 ⚖️ Sending Verdict for User 4 with PubKey: 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+2026/03/05 00:23:42 ✅ Anchor sent to Axon! [Count: 2] [BatchHash: 8b0bb180b61e0fcc110d56f7b2260f407cddcc68f2c2508c0fae9f5521b09305] [TxHash: 2405be23956daf2bf432dd25e2208d75991a0434b0084c58d7693caa7c1002cc]
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659426,"readings":{"motor_rpm":1562,"pressure":96.72476093913038,"temperature":229.82788713967733,"vibration":0.03570668718121991}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: WARN | Rule: BOILER_TEMPERATURE_EXCEEDS_NORMAL_ENVELOPE | ⏱️  520.8µs
+🔗 [LEDGER] Verdict Anchored | Tx: 0b92b2a0c94a0650090a1c458e7907115ff888e0d5d584322045ec962d76f5af | Device: did:sop:boiler-01
+2026/03/05 00:23:47 ⚓ Submitting Anchor for User 4 with PubKey: 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659430,"readings":{"motor_rpm":1551,"pressure":95.08077949098447,"temperature":231.34330219649186,"vibration":0.025555257372909854}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: WARN | Rule: BOILER_TEMPERATURE_EXCEEDS_NORMAL_ENVELOPE | ⏱️  73.3µs
+2026/03/05 00:23:52 ✅ Anchor sent to Axon! [Count: 3] [BatchHash: 70e4304865239ae9f17de6a71b1ff2f67524bbff8653362a2287ec3727a0ae65] [TxHash: 5bea81c06ea78ecdfd3f30ffc702a63d57154b96a9a921f4a48af890f1ade710]
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659434,"readings":{"motor_rpm":1503,"pressure":97.72326788650155,"temperature":228.62072080920092,"vibration":0.0382572131074884}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: WARN | Rule: BOILER_TEMPERATURE_EXCEEDS_NORMAL_ENVELOPE | ⏱️  610.3µs
+2026/03/05 00:23:57 ⚓ Submitting Anchor for User 4 with PubKey: 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659438,"readings":{"motor_rpm":1500,"pressure":97.50569223570392,"temperature":235.78687854043423,"vibration":0.023670761417531713}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: WARN | Rule: BOILER_TEMPERATURE_EXCEEDS_NORMAL_ENVELOPE | ⏱️  516.9µs
+📥 [DEBUG] Raw Telemetry Payload: {"device_id":"did:sop:boiler-01","timestamp":1772659442,"readings":{"motor_rpm":1527,"pressure":112.02935347571449,"temperature":205.86661280804935,"vibration":0.1320490757562263}}
+🔍 [AXON CHAIN] Resolved Identity: &{DID:did:sop:boiler-01 PublicKey: Role:}
+🦅 [SMART UNIT] Device: did:sop:boiler-01 | Verdict: HALT | Rule: CRITICAL_PRESSURE_AND_VIBRATION_MATCH_EXPLOSION_PATTERN | ⏱️  0s
+📤 [REPORTING] Trigger: STATE_TRANSITION | Device: did:sop:boiler-01 | Verdict: HALT
+2026/03/05 00:24:02 ⚖️ Sending Verdict for User 4 with PubKey: 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+2026/03/05 00:24:02 ✅ Anchor sent to Axon! [Count: 2] [BatchHash: f0794ba6167b5ae8dd5535ca0bbb02955001a1aadb426d21d4f8773214359b22] [TxHash: 290c2fd1c4ac6c858dba86406789a31db1c90555676c2a34883ab8977866dd22]
+🔗 [LEDGER] Verdict Anchored | Tx: b1460695290a04ed5aa8be35930c702cb72d3c306293c01a3600ae5231c7f95f | Device: did:sop:boiler-01
+2026/03/05 00:24:07 ⚓ Submitting Anchor for User 4 with PubKey: 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+2026/03/05 00:24:12 ✅ Anchor sent to Axon! [Count: 2] [BatchHash: 51e4683e497c84d03efcc56fde26c8947dfa9ec6097340b60b7053ab265d5b12] [TxHash: 5dee3c7b1017ee7b2d08c02cbef1535c83e376361cac718d9a854ac37916f6e4]
+
+ --- VINCI WALLET: EMERGENCY OVERRIDE (DIRTY STATE) ---
+---------------------------------------------------
+
+🛑 ACTION REQUIRED: Operator Credentials
+Enter 'acorp-operator-01' Public Key (Hex): 045401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a
+Enter 'acorp-operator-01' Private Key (Hex): b0baad96af7275320a3481409170aead879ccfe008397e2edcf115ec7983f974
+Enter Operator Account ID (e.g., 5): 5
+✅ Operator Identity Loaded: did:sop:acorp-operator-01:045401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a
+
+[STEP 1] PREPARE: Requesting Tx Template from Axon (via Synapse)...
+✅ PREPARE SUCCESS
+   📝 Unsigned Tx: ff8bff930301010b5472616e73616374696f6e01ff9400010a01024944010a0001045479706501040001074f70436f756e74010600010446726f6d010600010346656501040001084761734c696d69740106000108476173507269636501060001094f7065726174696f6e01ff960001095075626c69634b6579010a0001095369676e6174757265010a0000002cff95030101094f7065726174696f6e01ff9600010201045479706501060001075061796c6f6164010a000000fe0304ff9401207e3afcacf6f14c7d88114a76d0f957c66c682081345cd975c4226205454543d1030501fe07d003011101fe028e7b227461726765745f646964223a225a476c6b4f6e4e766344706962326c735a5849744d44453d222c2276657264696374223a22414c4c4f57222c22726561736f6e223a224d616e75616c204f766572726964652064756520746f2073656e736f72206661696c757265202856696e636920554929222c22696e7075745f68617368223a22633268684d6a55324f6d52316257313558326c756348563058326868633268665a6d39795833526c6333513d222c22676174657761795f7369676e6174757265223a22222c22706f6c6963795f68617368223a22633268684d6a55324f6d5231625731355833427662476c6a6556396f59584e6f58325a76636c39305a584e30222c2262696e64696e675f70726f76656e616e6365223a6e756c6c2c226f76657272696465223a7b22746f6b656e223a22617574682d746f6b656e2d78797a222c227369676e65725f646964223a225a476c6b4f6e4e766344706859323979634331766347567959585276636930774d546f774e4455304d4446684e54646b4d5759774e6a526c4e47466a4e6a4e6a4e3259344e6a68694e4441794e54466c4d575a6d4d7a566a597a67325a6d46684e57517a59575133596d4a6d4e574a6c4e474d78596a56684e6d59794d54566a4e6a41344d574977597a426b4f44566a4e57526d5a6d52685a5445344f44466d4e5746685a474d354d6d566c4d6a51794d3259795a6a51344e5451345a446c694d4449784d6d597a593251354d544e68222c226a757374696669636174696f6e5f636f6465223a22434c4153535f53222c226c696162696c6974795f68617368223a22633268684d6a55324f6e42796232396d4c57396d4c57787059574a7062476c306553316b62324e31625756756443316f59584e6f227d7d000141045401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a00
+    Hash To Sign: 7e3afcacf6f14c7d88114a76d0f957c66c682081345cd975c4226205454543d1
+
+[STEP 2] SIGN: Generating real cryptographic signature locally...
+✅ SIGN SUCCESS
+   🖋️  Signature: e3419f1e497f95ac0e3fc928e4af96b2488553cc4c49253637c0523a814a03a3be09ce951016dedf3c2a5339dfb669ceacfab5b6db446475dfd29fd72a5479aa
+
+[STEP 3] BROADCAST: Submitting signed transaction to Ledger...
+✅ BROADCAST SUCCESS: The System is now in DIRTY STATE!
+   🚀 Transaction ID: 7e3afcacf6f14c7d88114a76d0f957c66c682081345cd975c4226205454543d1
+
+🔗 Verify at: http://localhost:8080/tx/7e3afcacf6f14c7d88114a76d0f957c66c682081345cd975c4226205454543d1
+---------------------------------------------------
+
+GET http://localhost:8080/tx/7e3afcacf6f14c7d88114a76d0f957c66c682081345cd975c4226205454543d1
+{
+    "success": true,
+    "data": {
+        "block_hash": "6c5f0304fef59e6e708c978385c0469865b8d4ed1a51225e15ec9103e1726e07",
+        "block_height": 141,
+        "fee": 1000,
+        "from": 5,
+        "gas_limit": 0,
+        "gas_price": 0,
+        "input_hash": "c2hhMjU2OmR1bW15X2lucHV0X2hhc2hfZm9yX3Rlc3Q=",
+        "op_count": 0,
+        "override": {
+            "token": "auth-token-xyz",
+            "signer_did": "ZGlkOnNvcDphY29ycC1vcGVyYXRvci0wMTowNDU0MDFhNTdkMWYwNjRlNGFjNjNjN2Y4NjhiNDAyNTFlMWZmMzVjYzg2ZmFhNWQzYWQ3YmJmNWJlNGMxYjVhNmYyMTVjNjA4MWIwYzBkODVjNWRmZmRhZTE4ODFmNWFhZGM5MmVlMjQyM2YyZjQ4NTQ4ZDliMDIxMmYzY2Q5MTNh",
+            "justification_code": "CLASS_S",
+            "liability_hash": "c2hhMjU2OnByb29mLW9mLWxpYWJpbGl0eS1kb2N1bWVudC1oYXNo"
+        },
+        "policy_hash": "c2hhMjU2OmR1bW15X3BvbGljeV9oYXNoX2Zvcl90ZXN0",
+        "public_key": "045401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a",
+        "reason": "Manual Override due to sensor failure (Vinci UI)",
+        "receipt": {
+            "error": "",
+            "gas_used": 0,
+            "status": true
+        },
+        "signature": "e3419f1e497f95ac0e3fc928e4af96b2488553cc4c49253637c0523a814a03a3be09ce951016dedf3c2a5339dfb669ceacfab5b6db446475dfd29fd72a5479aa",
+        "status": "Confirmed",
+        "timestamp": 1772659773,
+        "tx_id": "7e3afcacf6f14c7d88114a76d0f957c66c682081345cd975c4226205454543d1",
+        "type": "Confession",
+        "verdict": "ALLOW"
+    }
+}
+
+
+🛡️  --- AUDITOR: SYSTEM STATE RESET (CLEAN SLATE) ---
+---------------------------------------------------
+
+🛑 ACTION REQUIRED: Auditor Credentials
+Enter Auditor Public Key (Hex): 04d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb6
+Enter Auditor Private Key (Hex): 943305fffe31aad2ef6a5d9e9b72bb7f9635e87e77ba2a28118f118002c5d94c
+Enter Auditor Account ID (e.g., 6): 6
+✅ Auditor Identity Loaded. Target: did:sop:boiler-01
+
+[STEP 1] PREPARE: Requesting Reset Template (Type 18)...
+✅ PREPARE SUCCESS
+   📝 Unsigned Tx: ff8bff930301010b5472616e73616374696f6e01ff9400010a01024944010a0001045479706501040001074f70436f756e74010600010446726f6d010600010346656501040001084761734c696d69740106000108476173507269636501060001094f7065726174696f6e01ff960001095075626c69634b6579010a0001095369676e6174757265010a0000002cff95030101094f7065726174696f6e01ff9600010201045479706501060001075061796c6f6164010a000000fe0148ff940120d8717454875297ff8a6849ac54431b6e0070151de0c9b5c9bdd8dd47763ec99f030601fe07d003011201ffd37b227461726765745f646964223a226469643a736f703a626f696c65722d3031222c226f766572726964655f7265666572656e6365223a227368613235363a6d6f636b2d6f766572726964652d726566222c2261756469746f725f76657264696374223a224a5553544946494544222c22726561736f6e223a22436f6d706c69616e6365204175646974202339393231205061737365642e2053797374656d20726573746f7265642e222c2261756469745f726566223a2275726e3a736f70636f733a61756469743a323032352d303031227d00014104d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb600
+   🔐 Hash To Sign: d8717454875297ff8a6849ac54431b6e0070151de0c9b5c9bdd8dd47763ec99f
+
+[STEP 2] SIGN: Generating real cryptographic signature locally...
+✅ SIGN SUCCESS
+   🖋️  Signature: 3c3364170fc17b3e2fd8f1c7cdff68e0258197d0bb93c2138744159a509fb285db68a57d42f4678f560218f603b2c4a32bbcf5d67682a9ca71b42e1b8964cb87
+
+[STEP 3] BROADCAST: Sending Signed Reset to Ledger...
+✅ RESET SUCCESS
+   🚀 Transaction ID: d8717454875297ff8a6849ac54431b6e0070151de0c9b5c9bdd8dd47763ec99f
+   ✨ Local State for did:sop:boiler-01 should now be CLEAN.
+---------------------------------------------------
+GET http://localhost:8080/tx/d8717454875297ff8a6849ac54431b6e0070151de0c9b5c9bdd8dd47763ec99f
+{
+    "success": true,
+    "data": {
+        "block_hash": "318b21f9d8ad8d0e0d2bba3527594b7e56d20063e21951d6c5d93e672a2c677c",
+        "block_height": 162,
+        "fee": 1000,
+        "from": 6,
+        "gas_limit": 0,
+        "gas_price": 0,
+        "op_count": 0,
+        "public_key": "04d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb6",
+        "receipt": {
+            "error": "",
+            "gas_used": 0,
+            "status": true
+        },
+        "signature": "3c3364170fc17b3e2fd8f1c7cdff68e0258197d0bb93c2138744159a509fb285db68a57d42f4678f560218f603b2c4a32bbcf5d67682a9ca71b42e1b8964cb87",
+        "status": "Confirmed",
+        "timestamp": 1772659988,
+        "tx_id": "d8717454875297ff8a6849ac54431b6e0070151de0c9b5c9bdd8dd47763ec99f",
+        "type": "StateReset"
+    }
+}
+
+
+GET http://localhost:8080/policy/did:sop:boiler-01
+ {
+    "success": true,
+    "data": {
+        "authority_level": 0,
+        "binding_provenance": null,
+        "gateway_signature": "",
+        "input_hash": "c2hhMjU2OmR1bW15X2lucHV0X2hhc2hfZm9yX3Rlc3Q=",
+        "policy_hash": "c2hhMjU2OmR1bW15X3BvbGljeV9oYXNoX2Zvcl90ZXN0",
+        "reason": "Compliance Audit #9921 Passed. System restored.",
+        "system_state": "CLEAN",
+        "target_did": "did:sop:boiler-01",
+        "verdict": 1
+    }
+} 

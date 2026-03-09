@@ -1,0 +1,102 @@
+🦅 --- SOPCOS AXON: POLICY ORCHESTRATION & ENFORCEMENT ---
+
+[0/6] Purging old Axon local database...
+  - No existing data folder found. Proceeding cleanly.
+
+[1/6] Building Axon binary and WASM policy...
+🦅 Sopcos Policy Transpiler v2.0 (Smart Unit Support)
+📝 Loaded Policy: boiler_master_unit (v2.0)
+✨ TinyGo detected! Using Extended ABI (Shared Memory).
+⚙️  Generated Source: generated_policy.go
+🔨 Compiling to WASM: artifacts\policy.wasm...
+✅ Build Success! Production-ready WASM created.
+🔑 WASM Hash: 278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+✅ Binary and WASM policy built successfully.
+
+[2/6] Configuring Cloud Environment...
+Enter AWS_ACCESS_KEY_ID: AKIAZOD2IUNTPDQ7F665
+Enter AWS_SECRET_ACCESS_KEY: ****************************************
+Enter AWS_REGION: eu-north-1
+
+[3/6] Publishing WASM to Cloud Vault (S3)...
+🦅 Sopcos Artifact Publisher (SIP-019)
+📂 Reading Artifact: artifacts\policy.wasm
+🧬 Artifact DNA: 278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+☁️  Initializing S3 Upload to [eu-north-1] sopcos-vault...
+✅ Upload Success! URI: s3://sopcos-vault/policies/v1/278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d.wasm
+
+📋 Ledger Transaction Payload (Ready for CLI):
+---------------------------------------------------
+{
+  "op_code": "0x50",
+  "urn": "urn:sopcos:policy:278a9ac890b498c5",
+  "content_hash": "278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d",
+  "type": "policy",
+  "author_did": "did:sop:boiler-01",
+  "storage_uri": "s3://sopcos-vault/policies/v1/278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d.wasm",
+  "policy_type": "unit_master",
+  "scope": [
+    "pressure",
+    "vibration",
+    "temperature",
+    "rpm"
+  ],
+  "algorithm": "sha256",
+  "timestamp": 1772659093
+}
+---------------------------------------------------
+🔍 Smart Unit Scope: [pressure vibration temperature rpm]
+
+✅ Cloud upload complete.
+ACTION REQUIRED: Copy the publisher output to '.\artifacts\payload.json' and save.
+Press Enter AFTER saving artifacts/payload.json (Also please don't forget to update acorp private key to config.yaml):
+
+
+[4/6] Submitting transaction to Core Ledger...
+🚀 Sopcos Transaction Submitter
+📦 Loaded Payload for DID: did:sop:boiler-01
+📡 Sending Prepare Request...
+📝 Hash to Sign: 42d78503ba1a4575b0917a5ea04b25caa62b04da5443b90cffab89b334e198b6
+🚀 Broadcasting Transaction...
+✅ Transaction Success!
+🔗 TX Hash: 
+✅ Policy anchored to Ledger successfully.
+
+[5/6] Verifying Deployment via API Gateway...
+✅ Verification Success: Policy found on Ledger!
+URN: urn:sopcos:policy:278a9ac890b498c5
+
+[6/6] Running Enforcer (Policy Truth Verification)...
+Enter the WASM S3 URI: s3://sopcos-vault/policies/v1/278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d.wasm
+Enter the WASM Hash: 278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+Testing policy with Telemetry: Pressure=97, Vibration=0.026, Temp=250
+🛡️  Sopcos Policy Enforcer (Synapse Node)
+📡 Connecting to Vault: [eu-north-1] sopcos-vault
+⬇️  Downloading Artifact: policies/v1/278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d.wasm
+🧬 Integrity Check:
+   Expected:   278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+   Calculated: 278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d
+✅ Integrity Verified. Artifact is trusted.
+🚀 Initializing Wazero Sandbox (WASI)...
+⚡ Injecting Telemetry (Shared Memory): {"device_id":"enforcer-test-device","timestamp":1772659147,"readings":{"pressure":97,"temperature":250,"vibration":0.026}}
+
+⚖️  FINAL VERDICT:
+---------------------------------------------------
+{
+  "verdict": "WARN",
+  "reason": "BOILER_TEMPERATURE_EXCEEDS_NORMAL_ENVELOPE",
+  "input_hash": "574cb8368286bb58658f3000dae6b0ebffc69863d8451dcaf669a833c7753488",
+  "gateway_signature": "sig_mock_enforcer_tool",
+  "policy_hash": "278a9ac890b498c5e9596d7a2efcd28f1477fc9016c9a21f6eb3e8fdf4863a0d",
+  "binding_provenance": {
+    "declaration_hash": "hash_mock_binding",
+    "sensor_timestamp": 1772659147
+  }
+}
+⏱️  Execution Time: 0s
+---------------------------------------------------
+
+✅ Enforcer Confirmed: WASM logic is operational.
+
+--- AXON DEPLOYMENT & ENFORCEMENT COMPLETE ---
+Next Step: 05_Launch_Synapse_Runtime.ps1

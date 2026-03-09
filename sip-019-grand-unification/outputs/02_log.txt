@@ -1,0 +1,78 @@
+🦅 --- SOPCOS CORE LEDGER: FINANCIAL INITIALIZATION ---
+
+[1/4] Provisioning Accounts...
+  - Creating account for 'acorp' (Expected Index: 3)...
+Using config file: C:\sopcos\core-ledger\config.toml
+time=2026-03-05T00:09:58.784+03:00 level=INFO msg="Solving Proof-of-Work puzzle to create account... (this may take a few seconds)"
+time=2026-03-05T00:09:58.789+03:00 level=INFO msg="Proof-of-Work puzzle solved!" tx_id=0000c65f8cea57193626732366c6c099c2aed3a5d300feb0eafc7629e5770bb0
+Account creation transaction sent successfully. ID: 0000c65f8cea57193626732366c6c099c2aed3a5d300feb0eafc7629e5770bb0
+Use 'gettxstatus' to check for confirmation. It may take a few blocks for the account to appear.
+  - Creating account for 'acorp-synapse-edge-01' (Expected Index: 4)...
+Using config file: C:\sopcos\core-ledger\config.toml
+time=2026-03-05T00:10:03.840+03:00 level=INFO msg="Solving Proof-of-Work puzzle to create account... (this may take a few seconds)"
+time=2026-03-05T00:10:03.864+03:00 level=INFO msg="Proof-of-Work puzzle solved!" tx_id=00007eab71a5b98d1bc138d3432ac964611f6f420e8998834754e045e15aced3
+Account creation transaction sent successfully. ID: 00007eab71a5b98d1bc138d3432ac964611f6f420e8998834754e045e15aced3
+Use 'gettxstatus' to check for confirmation. It may take a few blocks for the account to appear.
+  - Creating account for 'acorp-operator-01' (Expected Index: 5)...
+Using config file: C:\sopcos\core-ledger\config.toml
+time=2026-03-05T00:10:08.917+03:00 level=INFO msg="Solving Proof-of-Work puzzle to create account... (this may take a few seconds)"
+time=2026-03-05T00:10:08.960+03:00 level=INFO msg="Proof-of-Work puzzle solved!" tx_id=0000ad24723346bda680a00af5af97c8eee4a130ab9f9001415624331cbb2b88
+Account creation transaction sent successfully. ID: 0000ad24723346bda680a00af5af97c8eee4a130ab9f9001415624331cbb2b88
+Use 'gettxstatus' to check for confirmation. It may take a few blocks for the account to appear.
+  - Creating account for 'acorp-auditor-01' (Expected Index: 6)...
+Using config file: C:\sopcos\core-ledger\config.toml
+time=2026-03-05T00:10:13.835+03:00 level=INFO msg="Solving Proof-of-Work puzzle to create account... (this may take a few seconds)"
+time=2026-03-05T00:10:13.839+03:00 level=INFO msg="Proof-of-Work puzzle solved!" tx_id=0000621cdf1221cffa2b37ec53043d5c831c66dd108aee1ce425b73f1b60326f
+Account creation transaction sent successfully. ID: 0000621cdf1221cffa2b37ec53043d5c831c66dd108aee1ce425b73f1b60326f
+Use 'gettxstatus' to check for confirmation. It may take a few blocks for the account to appear.
+✅ Accounts created successfully.
+
+[2/4] Verifying account list...
+
+--- ACCOUNT INDICES TELESCOPE ---
+Using config file: C:\sopcos\core-ledger\config.toml
+--- Accounts Owned by Wallet 'acorp' ---
+ACCOUNT #       NAME    BALANCE (SOPC)  DATA    PUBLIC KEY
+---------       ----    --------------  ----    ----------
+3                       0.002 SOPC              SOPC_35d75606ec81c461905a86072e36ff5fa447b6c7c3726e40dda4457bcaf7a201ea9685aad3add75395fe8d6c851e036642b2d7262316e9096f8150df5090c97b
+---------       ----    --------------  ----    ----------
+TOTAL           0.002 SOPC
+Using config file: C:\sopcos\core-ledger\config.toml
+--- Accounts Owned by Wallet 'acorp-synapse-edge-01' ---
+ACCOUNT #       NAME    BALANCE (SOPC)  DATA    PUBLIC KEY
+---------       ----    --------------  ----    ----------
+4                       0.002 SOPC              SOPC_21d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+---------       ----    --------------  ----    ----------
+TOTAL           0.002 SOPC
+Using config file: C:\sopcos\core-ledger\config.toml
+--- Accounts Owned by Wallet 'acorp-operator-01' ---
+ACCOUNT #       NAME    BALANCE (SOPC)  DATA    PUBLIC KEY
+---------       ----    --------------  ----    ----------
+5                       0.002 SOPC              SOPC_5401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a
+---------       ----    --------------  ----    ----------
+TOTAL           0.002 SOPC
+Using config file: C:\sopcos\core-ledger\config.toml
+No accounts on the blockchain found for wallet 'acorp-auditor-01'.
+
+Please verify indices: Acorp(3), Synapse(4), Operator(5), Auditor(6).
+Press any key to proceed with the Funding Transfers...
+
+[3/4] Executing Genesis Transfer (Admin #1 -> ACorp #3)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent successfully. ID: 2ae04f6751ef449494e60bf4acc33d6f3f1225071cc8d41834738cc18c999092
+✅ Success! 1000 SOPC transferred to ACorp.
+
+[4/4] Executing Operational Funding (100 SOPC each)...
+  -> Funding Synapse Edge (#4)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent successfully. ID: 52f70d283ef5960411d74c238d06e05594ec00582a2738bf9ea5158cf354d21a
+  -> Funding Operator (#5)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent successfully. ID: debc9c3bf9ac86e68074e20fd2b4f3738757243afa7b657afb7ddef7f23e4e66
+  -> Funding Auditor (#6)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent successfully. ID: b769294d97a79eaed0730dbb4c4372b495e52ff18d5dda9e3ac760689d77b685
+
+--- FINANCIAL SETUP COMPLETE ---
+ACorp (700 SOPC), Synapse (100 SOPC), Operator (100 SOPC), Auditor (100 SOPC) are funded.
+Next Step: 03_Deploy_Smart_Unit.ps1

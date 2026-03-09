@@ -1,0 +1,75 @@
+🦅 --- SOPCOS NEXUS: FULL DEPLOYMENT SEQUENCE ---
+
+[1/6] Compiling Smart Unit WASM (TinyGo)...
+✅ registry.wasm compiled successfully.
+
+[2/6] Deploying WASM Policy via ACorp...
+Using config file: C:\sopcos\core-ledger\config.toml
+Deploy transaction sent. ID: c439ab7b2bcfab19b1855320e2b81b32f998eca5f0b17161c9cea9accb2b0603
+
+✅ Deployment transaction submitted.
+ACTION REQUIRED: Locate the 'Contract ID' in the Ledger logs.
+Enter the DEPLOYED CONTRACT ID (Registry ID): 8
+
+[3/6] Registering Organization & Edge Identities...
+  -> Registering Root Organization: did:sop:acorp
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent! ID: e753a940d9d32f2b6953d94b5908dd937bedddc545ee383a0da5b9359e60778c
+Waiting for block confirmation...
+✅ Transaction Confirmed in Block #43
+✅ Contract Execution Successful.
+
+🛑 ACTION REQUIRED: Identity Public Keys
+Please enter the Public Keys noted from Script 01.
+Enter 'acorp-synapse-edge-01' Public Key (Hex): 0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80
+  -> Registering Edge Gateway (did:sop:acorp-synapse-edge-01:0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent! ID: 34b814b61251a80a9e988e23d11e14332b58e7f2f97a472d5663b1471a68ea08
+Waiting for block confirmation...
+.✅ Transaction Confirmed in Block #45
+✅ Contract Execution Successful.
+Enter 'acorp-operator-01' Public Key (Hex): 045401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a
+  -> Registering Operator (did:sop:acorp-operator-01:045401a57d1f064e4ac63c7f868b40251e1ff35cc86faa5d3ad7bbf5be4c1b5a6f215c6081b0c0d85c5dffdae1881f5aadc92ee2423f2f48548d9b0212f3cd913a)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent! ID: a16d102b63edd159e348eb1bcf6319c33b1ff77c83dba96afa7d06b631ea73c3
+Waiting for block confirmation...
+..✅ Transaction Confirmed in Block #46
+✅ Contract Execution Successful.
+Enter 'acorp-auditor-01' Public Key (Hex): 04d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb6
+  -> Registering Auditor (did:sop:acorp-auditor-01:04d03c9ca0896c0606ce2f5c5401e4807cdaf37d8375a6cc13ee5d1e92afaad76267aede1e9516edef9aece36ba69318dfb73f085be65e8f749e4c644aef0e6fb6)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Transaction sent! ID: 9d107207f27655dc7bcd80598e0c6d817fc81a02b00e0afeea8b23774ecddfb0
+Waiting for block confirmation...
+..✅ Transaction Confirmed in Block #47
+✅ Contract Execution Successful.
+
+✅ All identities registered successfully with SIP-018 Authority Levels.
+
+[4/6] Launching Core Ledger API...
+✅ API Gateway started in a new window.
+
+[5/6] Creating IDAS Asset Class (Industrial Boilers)...
+Using config file: C:\sopcos\core-ledger\config.toml
+✅ Asset Class creation transaction sent.
+Transaction ID: 9ae449f03c574a1cc5f010761390a0e5de9fa47ff50c519952f9de63cd03cd7b
+Calculated ClassID: 16372392958147715323
+Note: Please wait for the transaction to be confirmed.
+
+✅ Class creation request sent.
+ACTION REQUIRED: Locate the 'Calculated ClassID' in the logs.
+Enter the Calculated CLASS ID: 16372392958147715323
+
+[6/6] Minting IDAS Asset (Digital Twin)...
+Using config file: C:\sopcos\core-ledger\config.toml
+Mint IDAS transaction sent successfully. TX ID: adba65401a4e6d574a1a8d18aee68769b2600cdd9281f902646f03dd49c75cba
+
+✅ IDAS Minting Successful!
+Please take note of the generated ASSET ID for your records.
+
+--- FULL NEXUS DEPLOYMENT COMPLETE ---
+WASM Policy: Active (Registry ID: 8)
+Organization: did:sop:acorp (Registered)
+Edge Gateway: did:sop:acorp-synapse-edge-01:0421d8f4f3ecf4f6981c7d04f8db615c9545e4ef6d6e492a584fc03602ee7b90e5a3d3bddd8b407366abbeb93cda46613964cc7dc616876541d07bd99fe0f4bf80 (Registered)
+Asset: Boiler SN-2026-SIP21 (Minted)
+API: Listening...
+Next Step: Configure Synapse with its Keystore and start sending signed Verdicts!
