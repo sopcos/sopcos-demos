@@ -60,7 +60,7 @@ These demonstrations correspond to SOPCOS protocol specifications defined in **S
 
 Example:
 
-- **SIP-019** — Policy Execution Runtime
+- **SIP-019** - Policy Execution Runtime
 
 Additional standards are available in the main SOPCOS repository.
 
